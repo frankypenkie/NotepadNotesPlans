@@ -66,10 +66,10 @@
     <Compile Include="createNewPoint.Designer.cs">
       <DependentUpon>createNewPoint.cs</DependentUpon>
     </Compile>
-    <Compile Include="notebookDBDataSet1.Designer.cs">
+    <Compile Include="notebookDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>notebookDBDataSet1.xsd</DependentUpon>
+      <DependentUpon>notebookDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="noteBookForm.cs">
       <SubType>Form</SubType>
@@ -94,16 +94,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="notebookDBDataSet1.xsc">
-      <DependentUpon>notebookDBDataSet1.xsd</DependentUpon>
+    <None Include="notebookDBDataSet.xsc">
+      <DependentUpon>notebookDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="notebookDBDataSet1.xsd">
+    <None Include="notebookDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>notebookDBDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>notebookDBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="notebookDBDataSet1.xss">
-      <DependentUpon>notebookDBDataSet1.xsd</DependentUpon>
+    <None Include="notebookDBDataSet.xss">
+      <DependentUpon>notebookDBDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

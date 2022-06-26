@@ -22,7 +22,7 @@ namespace notebook {
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
     [global::System.Xml.Serialization.XmlRootAttribute("notebookDBDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class notebookDBDataSet1 : global::System.Data.DataSet {
+    public partial class notebookDBDataSet : global::System.Data.DataSet {
         
         private EntryDataTable tableEntry;
         
@@ -32,7 +32,7 @@ namespace notebook {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public notebookDBDataSet1() {
+        public notebookDBDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -43,7 +43,7 @@ namespace notebook {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected notebookDBDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected notebookDBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -142,7 +142,7 @@ namespace notebook {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            notebookDBDataSet1 cln = ((notebookDBDataSet1)(base.Clone()));
+            notebookDBDataSet cln = ((notebookDBDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -257,7 +257,7 @@ namespace notebook {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            notebookDBDataSet1 ds = new notebookDBDataSet1();
+            notebookDBDataSet ds = new notebookDBDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -571,7 +571,7 @@ namespace notebook {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                notebookDBDataSet1 ds = new notebookDBDataSet1();
+                notebookDBDataSet ds = new notebookDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -865,7 +865,7 @@ namespace notebook {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                notebookDBDataSet1 ds = new notebookDBDataSet1();
+                notebookDBDataSet ds = new notebookDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1326,7 +1326,7 @@ SELECT id_entry, name_entry, date_entry, note_or_plan, text_entry FROM Entry WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(notebookDBDataSet1.EntryDataTable dataTable) {
+        public virtual int Fill(notebookDBDataSet.EntryDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1339,9 +1339,9 @@ SELECT id_entry, name_entry, date_entry, note_or_plan, text_entry FROM Entry WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual notebookDBDataSet1.EntryDataTable GetData() {
+        public virtual notebookDBDataSet.EntryDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            notebookDBDataSet1.EntryDataTable dataTable = new notebookDBDataSet1.EntryDataTable();
+            notebookDBDataSet.EntryDataTable dataTable = new notebookDBDataSet.EntryDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1349,14 +1349,14 @@ SELECT id_entry, name_entry, date_entry, note_or_plan, text_entry FROM Entry WHE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(notebookDBDataSet1.EntryDataTable dataTable) {
+        public virtual int Update(notebookDBDataSet.EntryDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(notebookDBDataSet1 dataSet) {
+        public virtual int Update(notebookDBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Entry");
         }
         
@@ -1661,7 +1661,7 @@ SELECT id_entry, name_entry, date_entry, note_or_plan, text_entry FROM Entry WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(notebookDBDataSet1.SettingsDataTable dataTable) {
+        public virtual int Fill(notebookDBDataSet.SettingsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1674,9 +1674,9 @@ SELECT id_entry, name_entry, date_entry, note_or_plan, text_entry FROM Entry WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual notebookDBDataSet1.SettingsDataTable GetData() {
+        public virtual notebookDBDataSet.SettingsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            notebookDBDataSet1.SettingsDataTable dataTable = new notebookDBDataSet1.SettingsDataTable();
+            notebookDBDataSet.SettingsDataTable dataTable = new notebookDBDataSet.SettingsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1684,14 +1684,14 @@ SELECT id_entry, name_entry, date_entry, note_or_plan, text_entry FROM Entry WHE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(notebookDBDataSet1.SettingsDataTable dataTable) {
+        public virtual int Update(notebookDBDataSet.SettingsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(notebookDBDataSet1 dataSet) {
+        public virtual int Update(notebookDBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Settings");
         }
         
@@ -1923,7 +1923,7 @@ SELECT id_entry, name_entry, date_entry, note_or_plan, text_entry FROM Entry WHE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(notebookDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(notebookDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._entryTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Entry.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1951,7 +1951,7 @@ SELECT id_entry, name_entry, date_entry, note_or_plan, text_entry FROM Entry WHE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(notebookDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(notebookDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._entryTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Entry.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1977,7 +1977,7 @@ SELECT id_entry, name_entry, date_entry, note_or_plan, text_entry FROM Entry WHE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(notebookDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(notebookDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._settingsTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Settings.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -2027,7 +2027,7 @@ SELECT id_entry, name_entry, date_entry, note_or_plan, text_entry FROM Entry WHE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(notebookDBDataSet1 dataSet) {
+        public virtual int UpdateAll(notebookDBDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
